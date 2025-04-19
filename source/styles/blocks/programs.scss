@@ -1,0 +1,129 @@
+.programs {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+    gap: 30px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 82px 110px 71px;
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
+.programs__item {
+  position: relative;
+  &:after {
+    content: "";
+    width: 36px;
+    height: 50px;
+    background-image: url(../../images/icons/cat-slim.svg);
+    position: absolute;
+    left: 27px;
+    top: 21px;
+    background-repeat: no-repeat;
+    @media (min-width: $tablet-width) {
+      width: 140px;
+      height: 194px;
+      left: unset;
+      top: 81px;
+      right: 93px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      height: 97px;
+      left: 67px;
+      top: 41px;
+      right: unset;
+    }
+  }
+  *:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $background-special;
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    border-radius: 50%;
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      top: 81px;
+      right: 63px;
+      left: unset;
+    }
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      left: 52px;
+      top: 47px;
+      right: unset;
+    }
+  }
+}
+.program--pro::after {
+  background-image: url(../../images/icons/cat-pro.svg);
+  width: 67px;
+  height: 28px;
+  top: 35px;
+  left: 13px;
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+    top: 91px;
+    right: 29px;
+    left: unset;
+  }
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 56px;
+    left: 33px;
+    top: 67px;
+    right: unset;
+  }
+}
+
+.program__title {
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 37px;
+  color: $secondary-color;
+  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+.program__description {
+  font-size: 14px;
+  line-height: 18px;
+  @media (min-width: $tablet-width) {
+    color: $secondary-color;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.program__link {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Oswald";
+  color: $secondary-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-image: url(../../images/icons/link-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 32px 10px;
+  padding-right: 39px;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 49px;
+  }
+}

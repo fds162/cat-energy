@@ -1,0 +1,52 @@
+.example {
+  padding: 25px 20px 40px;
+  background-color: #eaeaea;
+  @media (min-width: $tablet-width) {
+    padding: 45px 30px 101px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 69px 110px 75px;
+  }
+}
+
+.example__title {
+  @include font-h2;
+}
+.example__description {
+  font-size: 14px;
+  line-height: 18px;
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.example__results-item {
+  font-size: 24px;
+  line-height: 24px;
+  color: $secondary-color;
+  font-family: "Oswald";
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+.example__results-description {
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.example__cost {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  font-family: "Oswald";
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

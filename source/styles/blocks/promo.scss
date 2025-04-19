@@ -1,0 +1,55 @@
+.promo {
+  padding: 27px 20px 0 20px;
+  background: linear-gradient(to bottom, #68b738d9, #68b738d9),
+    url(../../images/cat_background-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+  background-position: 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.promo__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: $lighter-color;
+  font-family: "Oswald";
+  font-weight: 400;
+  max-width: 249px;
+  width: 100%;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: $secondary-color;
+    max-width: 414px;
+    width: 100%;
+    text-align: left;
+  }
+}
+.promo__subtitle {
+  font-family: "Oswald";
+  font-size: 14px;
+  line-height: 14px;
+  color: $lighter-color;
+  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $secondary-color;
+  }
+}
+.promo__choose-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald";
+  background-color: $special-color;
+  color: $lighter-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

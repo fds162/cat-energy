@@ -1,0 +1,315 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.scss" />
+    <script src="scripts/index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="header__nav">
+          <a href="#" class="header__logo-link">
+            <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 1440px)"
+                width="552"
+                height="499"
+                srcset="
+                  ./images/index-can-desktop@1x.webp 1x,
+                  ./images/index-can-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                width="709"
+                height="609"
+                srcset="
+                  ./images/index-can-tablet@1x.webp 1x,
+                  ./images/index-can-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                width="280"
+                height="270"
+                srcset="
+                  ./images/index-can-mobile@1x.webp 1x,
+                  ./images/index-can-mobile@2x.webp 2x
+                "
+              />
+              <source
+                type="image/png"
+                media="(min-width: 1440px)"
+                width="552"
+                height="499"
+                srcset="
+                  ./images/index-can-desktop@1x.png 1x,
+                  ./images/index-can-desktop@2x.png 2x
+                "
+              />
+              <source
+                type="image/png"
+                media="(min-width: 768px)"
+                width="709"
+                height="609"
+                srcset="
+                  ./images/index-can-tablet@1x.png 1x,
+                  ./images/index-can-tablet@2x.png 2x
+                "
+              />
+
+              <img
+                class="promo__image"
+                src="./images/index-can-mobile@1x.png"
+                srcset="./images/index-can-mobile@2x.png"
+                alt="orange cat energy can"
+                width="280"
+                height="270"
+              />
+            </picture>
+          </a>
+          <button type="button" class="header__menu-button button">
+            <span class="visually-hidden"
+              >Кнопка для открытия и закрытия бургер-меню</span
+            >
+          </button>
+          <ul class="list-reset header__menu">
+            <li class="header__menu-item">
+              <a href="./index.html" class="header__link">Главная</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__link">Каталог продукции</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__link header__link--current"
+                >Подбор программы</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <form class="form" action="">
+          <h1 class="form__heading">Подбор программы</h1>
+          <p class="form__subheading">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+          <section class="pet-info">
+            <h2 class="visually-hidden section-heading">
+              Основная информация про питомца
+            </h2>
+            <fieldset class="pet-info__main">
+              <label class="pet-info__input-label" for="pet-info__name"
+                >Имя:*
+                <input
+                  class="pet-info__input"
+                  type="text"
+                  name="имя питомца:"
+                  id="pet-info__name"
+                  required
+              /></label>
+              <label class="pet-info__label" for="pet-info__mass"
+                >Вес (кг):*
+                <input
+                  class="pet-info__input"
+                  type="text"
+                  name="вес питомца:"
+                  id="pet-info__mass"
+                  required
+              /></label>
+              <label class="pet-info__input-label" for="pet-info__age"
+                >Возраст (лет):
+                <input
+                  class="e pet-info__input"
+                  type="text"
+                  name="возраст питомца:"
+                  id="pet-info__age"
+              /></label>
+            </fieldset>
+            <fieldset class="pet-info__goal">
+              <label
+                class="pet-info__choose-goal"
+                for="pet-info__goal-lose-weight"
+                >Похудение<input
+                  id="pet-info__goal-lose-weight"
+                  class="pet-info__goal-input"
+                  value="Похудение"
+                  name="цель:"
+                  type="radio"
+              /></label>
+              <label
+                class="pet-info__choose-goal"
+                for="pet-info__goal-gain-weight"
+                >Набор массы<input
+                  id="pet-info__goal-gain-weight"
+                  class="pet-info__goal-input"
+                  value="Набор массы"
+                  name="цель:"
+                  type="radio"
+              /></label>
+              <label class="pet-info__choose-goal" for="pet-info__goal-advce"
+                >Не знаю (Нужен ваш совет)<input
+                  id="pet-info__goal-advce"
+                  class="pet-info__goal-input"
+                  value="Не знаю (Нужен ваш совет)"
+                  name="цель:"
+                  type="radio"
+              /></label>
+            </fieldset>
+          </section>
+          <section class="owner-contancts">
+            <h2 class="section-heading">Контактные данные (владельца кота)</h2>
+            <label class="owner-contancts__label" for="owner-contancts_email">
+              E-mail:*
+              <input
+                class="owner-contancts__input"
+                type="text"
+                name="email:"
+                id="owner-contancts_email"
+                required
+              />
+            </label>
+            <label
+              class="owner-contancts__label"
+              for="owner-contancts__tel-number"
+            >
+              Телефон:*
+              <input
+                class="owner-contancts__input"
+                type="text"
+                name="номер телефона:"
+                id="owner-contancts__tel-number"
+                required
+              />
+            </label>
+          </section>
+          <section class="comments">
+            <h2 class="section-heading">Комментарий</h2>
+            <input
+              name="Комментарий"
+              type="text"
+              class="comments__input"
+              placeholder="Расскажите обо всех повадках кота"
+              name=""
+              id=""
+            />
+          </section>
+          <section class="additional">
+            <h2 class="section-heading">Дополнительно</h2>
+            <label class="additional__label" for="additional__sweetener">
+              <input
+                id="additional__sweetener"
+                class="additional__checkbox"
+                name="сахарозаменитель:"
+                type="checkbox"
+              />
+              сахарозаменитель
+            </label>
+            <label class="additional__label" for="additional__water">
+              <input
+                id="additional__water"
+                class="additional__checkbox"
+                name="питьевая вода: "
+                type="checkbox"
+              />
+              питьевая вода
+            </label>
+            <label class="additional__label" for="additional__milk">
+              <input
+                id="additional__milk"
+                class="additional__checkbox"
+                name="молоко:"
+                type="checkbox"
+              />
+              молоко
+            </label>
+            <label class="additional__label" for="additional__vitamins">
+              <input
+                id="additional__vitamins"
+                class="additional__checkbox"
+                name="витамины:"
+                type="checkbox"
+              />
+              витамины
+            </label>
+          </section>
+          <button class="form__submit-button" type="submit">
+            отправить заявку
+          </button>
+          <p class="form__requiring">* — Обязательные поля</p>
+        </form>
+        <section class="contacts">
+          <h2 class="visually-hidden section-heading">Контакты</h2>
+          <picture>
+            <source
+              width="100%"
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="
+                ./images/map-desktop@1x.webp 1x,
+                ./images/map-desktop@2x.webp 2x
+              "
+            />
+            <source
+              width="100%"
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                ./images/map-tablet@1x.webp 1x,
+                ./images/map-tablet@2x.webp 2x
+              "
+            />
+            <source
+              width="100%"
+              type="image/webp"
+              srcset="
+                ./images/map-mobile@1x.webp 1x,
+                ./images/map-mobile@2x.webp 2x
+              "
+            />
+            <source
+              width="100%"
+              type="image/png"
+              media="(min-width: 1440px)"
+              srcset="
+                ./images/map-desktop@1x.png 1x,
+                ./images/map-desktop@2x.png 2x
+              "
+            />
+            <source
+              width="100%"
+              type="image/png"
+              media="(min-width: 768px)"
+              srcset="
+                ./images/map-tablet@1x.png 1x,
+                ./images/map-tablet@2x.png 2x
+              "
+            />
+            <img
+              width="100%"
+              src="./images/map-mobile@1x.jpg"
+              srcset="./images/map-mobile@2x.jpg"
+              alt="how map is looking"
+            />
+          </picture>
+          <img class="contacts__map-pin" src="" alt="" />
+          <address class="contacts__address-info">
+            <p class="contacts__invitation">
+              приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="contacts__address">
+              <span class="contacts__address-street"
+                >ул. Большая Конюшенная, д. 19/8</span
+              >
+              <span class="contacts__address-city">Санкт-Петербург</span>
+            </p>
+          </address>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
