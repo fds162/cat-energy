@@ -1,10 +1,19 @@
 .promo {
-  padding: 27px 20px 0 20px;
-
+  padding: 0px 20px 0 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+  @media (min-width: $tablet-width) {
+    padding: 0 34px 526px 120px;
+
+    align-items: flex-start;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 0 0 184px 190px;
+  }
 }
 .promo__title {
   font-size: 36px;
@@ -15,6 +24,7 @@
   max-width: 249px;
   width: 100%;
   text-align: center;
+  margin-bottom: 25px;
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
@@ -22,6 +32,7 @@
     max-width: 414px;
     width: 100%;
     text-align: left;
+    margin-bottom: 40px;
   }
 }
 .promo__subtitle {
@@ -30,10 +41,15 @@
   line-height: 14px;
   color: $lighter-color;
   text-transform: uppercase;
+  margin-bottom: 29px;
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: $secondary-color;
+    margin-bottom: 50px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
   }
 }
 .promo__choose-link {
@@ -44,8 +60,28 @@
   color: $lighter-color;
   text-decoration: none;
   text-transform: uppercase;
+
+  padding: 10px 63.5px;
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
+    padding: 14px 26px;
+  }
+}
+.promo__image {
+  display: block;
+  margin-bottom: 3px;
+  z-index: -1;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    margin-bottom: 0;
+    left: 30px;
+    bottom: 0;
+  }
+  @media (min-width: $desktop-width) {
+    left: unset;
+    right: 331px;
+    bottom: 52px;
+    z-index: 1;
   }
 }

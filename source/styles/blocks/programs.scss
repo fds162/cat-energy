@@ -17,7 +17,20 @@
 }
 
 .programs__item {
+  padding: 30px 33px 18px 20px;
+  background-color: #f2f2f2;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 52px 53px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
+
   &:after {
     content: "";
     width: 36px;
@@ -49,7 +62,7 @@
     background-color: $background-special;
     position: absolute;
     left: 20px;
-    top: 24px;
+    top: 21px;
     border-radius: 50%;
     @media (min-width: $tablet-width) {
       width: 200px;
@@ -75,8 +88,8 @@
   left: 13px;
   @media (min-width: $tablet-width) {
     width: 268px;
-    height: 200px;
-    top: 91px;
+    height: 112px;
+    top: 135px;
     right: 29px;
     left: unset;
   }
@@ -93,20 +106,35 @@
   font-family: "Oswald";
   font-size: 24px;
   line-height: 37px;
+  font-weight: 400;
   color: $secondary-color;
   text-transform: uppercase;
+  margin: 0 0 29px 70px;
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 0 0 24px 0;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0 0 73px 162px;
   }
 }
 .program__description {
   font-size: 14px;
   line-height: 18px;
+  padding: 0 13px 23px 0;
+  border-bottom: #d9d9d9 1px solid;
+  margin-bottom: 15px;
   @media (min-width: $tablet-width) {
     color: $secondary-color;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 48px;
+    padding: 0;
+    border-bottom: none;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 .program__link {
@@ -119,11 +147,11 @@
   background-image: url(../../images/icons/link-arrow.svg);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 32px 10px;
+  background-size: 24px 12px;
   padding-right: 39px;
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 38px;
     padding-right: 49px;
   }
 }
