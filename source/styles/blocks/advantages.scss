@@ -15,7 +15,8 @@
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  width: 100%;
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -31,28 +32,70 @@
 }
 .advantages__title {
   @include font-h2;
+  margin-bottom: 40px;
 }
 .advantages__item {
   font-size: 14px;
   line-height: 18px;
   position: relative;
-  max-width: 200px;
+  padding: 0 0 0 80px;
+  width: 100%;
+  max-width: calc((100% / 2)-137);
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
   }
 }
-.advantages__item::after {
+
+.advantages__item:nth-child(1)::after {
   content: "";
+  width: 24.8px;
+  height: 28px;
+  background-image: url(../../images/icons/icon-leaf.svg);
+  position: absolute;
+  top: 14px;
+  left: 18.07px;
+  background-size: 100%;
 }
+.advantages__item:nth-child(2)::after {
+  content: "";
+  width: 25.98px;
+  height: 28.51px;
+  background-image: url(../../images/icons/water.svg);
+  position: absolute;
+  top: 14px;
+  left: 17.5px;
+  background-size: 100%;
+}
+.advantages__item:nth-child(3)::after {
+  content: "";
+  width: 25px;
+  height: 30px;
+  background-image: url(../../images/icons/icon-eat.svg);
+  position: absolute;
+  top: 13px;
+  left: 17.5px;
+  background-size: 100%;
+}
+.advantages__item:nth-child(4)::after {
+  content: "";
+  width: 26.09px;
+  height: 31px;
+  background-image: url(../../images/icons/timer.svg);
+  position: absolute;
+  top: 13px;
+  left: 17.56px;
+  background-size: 100%;
+}
+
 .advantages__item::before {
   content: "";
   position: absolute;
   background-color: $background-special;
   width: 60px;
   height: 60px;
-  left: -80px;
-  top: -2px;
+  left: 0px;
+  top: -2;
   @media (min-width: $tablet-width) {
     width: 80px;
     height: 80px;
