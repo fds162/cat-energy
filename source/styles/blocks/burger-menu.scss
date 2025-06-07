@@ -1,0 +1,42 @@
+.burger {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 198px;
+  background-color: white;
+
+  top: 65px;
+  left: 0;
+  width: 100%;
+  max-width: 320px;
+}
+
+.burger--opened {
+  display: flex;
+}
+.burger__menu {
+  width: 100%;
+}
+.burger__item {
+  width: 100%;
+}
+.burger__item-link {
+  color: $secondary-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Oswald";
+  display: block;
+}
+.burger__item {
+  width: 100%;
+  padding: 21px 0 24px 0;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+.burger__item:last-child {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 21px 0 23px 0;
+}

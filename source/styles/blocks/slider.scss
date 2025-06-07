@@ -1,0 +1,28 @@
+.slider {
+  width: 280px;
+  height: 256px;
+  display: flex;
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.example__cat {
+  height: 256px;
+  object-fit: cover;
+  @media (min-width: $tablet-width) {
+    height: 512px;
+  }
+}
+
+.example__cat--before {
+  object-position: left top;
+}
+
+.example__cat--after {
+  object-position: right top;
+}

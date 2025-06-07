@@ -1,5 +1,5 @@
 .promo {
-  padding: 0px 20px 0 20px;
+  padding: 27px 20px 0 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -60,12 +60,20 @@
   color: $lighter-color;
   text-decoration: none;
   text-transform: uppercase;
-
   padding: 10px 63.5px;
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
     padding: 14px 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $background-button-hover;
+    outline: none;
+  }
+  &:active {
+    color: rgba($color: $lighter-color, $alpha: 0.3);
   }
 }
 .promo__image {

@@ -13,95 +13,74 @@
           <a href="#" class="header__logo-link">
             <picture>
               <source
-                type="image/webp"
+                type="image/svg+xml"
                 media="(min-width: 1440px)"
-                width="552"
-                height="499"
-                srcset="
-                  ./images/index-can-desktop@1x.webp 1x,
-                  ./images/index-can-desktop@2x.webp 2x
-                "
+                srcset="./images/logo-desktop.svg"
+                width="202"
+                height="59"
               />
               <source
-                type="image/webp"
+                type="image/svg+xml"
                 media="(min-width: 768px)"
-                width="709"
-                height="609"
-                srcset="
-                  ./images/index-can-tablet@1x.webp 1x,
-                  ./images/index-can-tablet@2x.webp 2x
-                "
-              />
-              <source
-                type="image/webp"
-                width="280"
-                height="270"
-                srcset="
-                  ./images/index-can-mobile@1x.webp 1x,
-                  ./images/index-can-mobile@2x.webp 2x
-                "
-              />
-              <source
-                type="image/png"
-                media="(min-width: 1440px)"
-                width="552"
-                height="499"
-                srcset="
-                  ./images/index-can-desktop@1x.png 1x,
-                  ./images/index-can-desktop@2x.png 2x
-                "
-              />
-              <source
-                type="image/png"
-                media="(min-width: 768px)"
-                width="709"
-                height="609"
-                srcset="
-                  ./images/index-can-tablet@1x.png 1x,
-                  ./images/index-can-tablet@2x.png 2x
-                "
+                srcset="./images/logo-tablet.svg"
+                width="174"
+                height="50"
               />
 
               <img
-                class="promo__image"
-                src="./images/index-can-mobile@1x.png"
-                srcset="./images/index-can-mobile@2x.png"
-                alt="orange cat energy can"
-                width="280"
-                height="270"
+                class="header__logo"
+                width="190"
+                height="38"
+                src="./images/logo-mobile.svg"
+                alt=""
               />
             </picture>
           </a>
-          <button type="button" class="header__menu-button button">
+          <button
+            type="button"
+            class="header__menu-button button button--functional"
+          >
             <span class="visually-hidden"
               >Кнопка для открытия и закрытия бургер-меню</span
             >
           </button>
           <ul class="list-reset header__menu">
             <li class="header__menu-item">
-              <a href="./index.html" class="header__link">Главная</a>
+              <a href="./index.html" class="header__link header__link--current"
+                >Главная</a
+              >
             </li>
             <li class="header__menu-item">
               <a href="#" class="header__link">Каталог продукции</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__link header__link--current"
-                >Подбор программы</a
-              >
+              <a href="./form.html" class="header__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
+
+        <div class="burger">
+          <ul class="list-reset burger__menu">
+            <li class="burger__item">
+              <a class="burger__item-link" href="#">Главная</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__item-link" href="#">Каталог продукции</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__item-link" href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </header>
       <main class="main">
+        <h1 class="form__heading">Подбор программы</h1>
+        <p class="form__subheading">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </p>
         <form class="form" action="">
-          <h1 class="form__heading">Подбор программы</h1>
-          <p class="form__subheading">
-            Заполните анкету, и мы подберем программу питания для вашего кота
-          </p>
-          <section class="pet-info">
-            <h2 class="visually-hidden section-heading">
-              Основная информация про питомца
-            </h2>
+          <fieldset class="pet-info">
+            <h2 class="visually-hidden">Основная информация про питомца</h2>
             <fieldset class="pet-info__main">
               <label class="pet-info__input-label" for="pet-info__name"
                 >Имя:*
@@ -160,7 +139,7 @@
                   type="radio"
               /></label>
             </fieldset>
-          </section>
+          </fieldset>
           <section class="owner-contancts">
             <h2 class="section-heading">Контактные данные (владельца кота)</h2>
             <label class="owner-contancts__label" for="owner-contancts_email">

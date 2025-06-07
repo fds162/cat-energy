@@ -1,11 +1,29 @@
 .example {
   padding: 25px 20px 40px;
-  background-color: #eaeaea;
+  background: #eaeaea;
   @media (min-width: $tablet-width) {
     padding: 45px 30px 101px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      to bottom,
+      $background-primary 619px,
+      $background-secondary 619px
+    );
   }
   @media (min-width: $desktop-width) {
-    padding: 69px 110px 75px;
+    padding: 0 110px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    background: linear-gradient(
+      to bottom,
+      $background-primary 136px,
+      $background-secondary 136px
+    );
+    gap: 224px;
   }
 }
 
@@ -42,6 +60,8 @@
   width: 100%;
   @media (min-width: $tablet-width) {
     margin-bottom: unset;
+    margin-block-start: 0;
+    gap: 43px;
   }
   @media (min-width: $desktop-width) {
     margin-bottom: 60px;
@@ -71,6 +91,16 @@
   }
   @media (min-width: $desktop-width) {
     display: block;
+    margin-bottom: 0;
+  }
+}
+.example__info-container {
+  margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 104px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 .example__results-item {
@@ -79,7 +109,7 @@
   line-height: 24px;
   color: $secondary-color;
   font-family: "Oswald";
-
+  padding-bottom: 3px;
   margin-inline-start: 0;
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -91,16 +121,19 @@
   line-height: 12px;
   text-align: center;
   position: absolute;
-  top: 63px;
+  top: 46px;
   background-color: #eaeaea;
   padding: 0 9px 0 9px;
-  max-width: max-content;
+  max-width: 77px;
   margin: auto;
   @media (min-width: $tablet-width) {
+    top: 63px;
     font-size: 14px;
     line-height: 14px;
+    max-width: max-content;
   }
 }
+
 .example__cost {
   font-size: 14px;
   line-height: 20px;

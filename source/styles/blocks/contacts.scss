@@ -68,3 +68,33 @@
 .contacts__map-image {
   display: block;
 }
+
+.contacts__map-interactive {
+  width: 320px;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.contacts__map-pin {
+  display: block;
+  position: absolute;
+  top: 251px;
+  left: 134px;
+  @media (min-width: $tablet-width) {
+    top: 346px;
+    left: 333px;
+  }
+  @media (min-width: $desktop-width) {
+    top: 131px;
+    right: 419px;
+    left: unset;
+  }
+}

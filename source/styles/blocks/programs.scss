@@ -6,7 +6,7 @@
   justify-content: flex-start;
   gap: 20px;
   @media (min-width: $tablet-width) {
-    padding: 30px;
+    padding: 0px 30px 45px 30px;
     gap: 30px;
   }
   @media (min-width: $desktop-width) {
@@ -15,7 +15,15 @@
     gap: 80px;
   }
 }
-
+.programs__swiper {
+  max-width: 280px;
+  @media (min-width: $tablet-width) {
+    max-width: 708px;
+  }
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+  }
+}
 .programs__item {
   padding: 30px 33px 18px 20px;
   background-color: #f2f2f2;
@@ -24,11 +32,14 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
   @media (min-width: $tablet-width) {
     padding: 77px 316px 52px 53px;
+    height: 372px;
   }
   @media (min-width: $desktop-width) {
     padding: 77px 61px 55px 52px;
+    height: 374px;
   }
 
   &:after {
@@ -55,19 +66,19 @@
       right: unset;
     }
   }
-  *:before {
+  &:before {
     content: "";
     width: 50px;
     height: 50px;
     background-color: $background-special;
     position: absolute;
     left: 20px;
-    top: 21px;
+    top: 24px;
     border-radius: 50%;
     @media (min-width: $tablet-width) {
       width: 200px;
       height: 200px;
-      top: 81px;
+      top: 92px;
       right: 63px;
       left: unset;
     }
@@ -80,6 +91,18 @@
     }
   }
 }
+.program--pro::before {
+  left: 21px;
+  @media (min-width: $tablet-width) {
+    right: 63px;
+    left: unset;
+  }
+  @media (min-width: $desktop-width) {
+    left: 52px;
+    top: 47px;
+    right: unset;
+  }
+}
 .program--pro::after {
   background-image: url(../../images/icons/cat-pro.svg);
   width: 67px;
@@ -89,7 +112,7 @@
   @media (min-width: $tablet-width) {
     width: 268px;
     height: 112px;
-    top: 135px;
+    top: 136px;
     right: 29px;
     left: unset;
   }
@@ -122,7 +145,7 @@
 .program__description {
   font-size: 14px;
   line-height: 18px;
-  padding: 0 13px 23px 0;
+  padding: 0 0px 22px 0;
   border-bottom: #d9d9d9 1px solid;
   margin-bottom: 15px;
   @media (min-width: $tablet-width) {
@@ -135,6 +158,7 @@
   }
   @media (min-width: $desktop-width) {
     margin-bottom: 23px;
+    max-width: 457px;
   }
 }
 .program__link {
@@ -148,10 +172,25 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: 24px 12px;
+  padding: 4px 0;
   padding-right: 39px;
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 38px;
+    line-height: 30px;
     padding-right: 49px;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    background-image: url(../../images/icons/link-arrow-hover.svg);
+    padding-right: 57px;
+    background-size: 32px 12px;
+  }
+  &:active {
+    background-image: url(../../images/icons/link-arrow-hover.svg);
+    padding-right: 57px;
+    background-size: 32px 12px;
+    opacity: 0.3;
   }
 }
